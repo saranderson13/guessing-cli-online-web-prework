@@ -3,7 +3,7 @@ def exit_game
 end
 
 def run_guessing_game
-  correct_answer = Math.rand(1..6)
+  correct_answer = Random.new.rand(1..6)
   
   puts "Guess a number between 1 and 6."
   selection = gets.chomp
