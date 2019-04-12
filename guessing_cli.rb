@@ -8,10 +8,12 @@ def run_guessing_game
   puts "Guess a number between 1 and 6."
   selection = gets.chomp
   
-  if selection == correct_answer
-    puts "You guessed the correct number!"
-  elsif selection != correct_answer
-    puts "The computer guessed #{correct_answer}"
+  while selection != "exit"
+    if selection == correct_answer
+      puts "You guessed the correct number!"
+    elsif selection != correct_answer
+      puts "The computer guessed #{correct_answer}"
+    end
   end
   
   exit_game if selection == "exit"
