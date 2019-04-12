@@ -3,12 +3,12 @@ def exit_game
 end
 
 def run_guessing_game
-  correct_answer = rand(1..6)
-  
   puts "Guess a number between 1 and 6."
   selection = gets.chomp
   
   while selection != "exit"
+    correct_answer = rand(1..6)
+    
     if selection.to_i == correct_answer
       puts "You guessed the correct number!"
       puts "Guess a number between 1 and 6."
@@ -16,6 +16,9 @@ def run_guessing_game
       break if selection == "exit"
     elsif selection.to_i != correct_answer
       puts "The computer guessed #{correct_answer}"
+      puts "Guess a number between 1 and 6."
+      selection = gets.chomp
+      break if selection == "exit"
     end
   end
   
