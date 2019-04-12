@@ -22,5 +22,5 @@ def run_guessing_game
     end
   end
   
-  exit_game if selection == "exit"
+  exit_game
 end
