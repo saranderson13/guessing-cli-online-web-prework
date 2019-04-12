@@ -16,8 +16,6 @@ def run_guessing_game
       break if selection == "exit"
     elsif selection.to_i != correct_answer
       puts "The computer guessed #{correct_answer}"
-      selection = gets.chomp
-      break if selection == "exit"
     end
   end
   
